@@ -22,14 +22,17 @@ public class OptionMenu extends Account {
 				data.put(27205, 0005);
 				data.put(27206, 0006);
 				data.put(27207, 0007);
-				System.out.println("Welcome to the ATM Project!");
-				System.out.println("Enter your customer Number");
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
+				System.out.println("WELCOME TO THE PROJECT");
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
+				System.out.print("Enter your customer Number:-");
 				setCustomerNumber(menuInput.nextInt());
 
-				System.out.println("Enter your PIN Number: ");
+				System.out.print("Enter your PIN Number:-     ");
 				setPinNumber(menuInput.nextInt());
+				System.out.println();
 			} catch (Exception e) {
-				System.out.println("\n" + "Invalid Character(s). Only Numbers." + "\n");
+				System.out.print("\n" + "Invalid Character(s). Only Numbers." + "\n");
 				x = 2;
 			}
 			/*
@@ -42,11 +45,19 @@ public class OptionMenu extends Account {
 			if (data.containsKey(cn) && data.get(cn) == pn) {
 				getAccountType();
 			} else
-				System.out.println("\n" + "Wrong Customer Number or Pin Number" + "\n");
+			{
+				System.out.println("--------------------------");
+				System.out.print("Invalid Accont:- \n");
+				System.out.println("Please Enter Valid Account");
+			}
 		} while (x == 1);
 	}
 
 	public void getAccountType() {
+		System.out.println();
+		System.out.println("***************************************");
+		System.out.println("DEAR CUSTOMER WELCOME TO OUR BANK");
+		System.out.println("***************************************");
 		System.out.println("Select the Account you Want to Access: ");
 		System.out.println(" Type 1 - Checking Account");
 		System.out.println(" Type 2 - Saving Account");
@@ -64,7 +75,9 @@ public class OptionMenu extends Account {
 			break;
 
 		case 3:
-			System.out.println("Thank You for using this ATM, bye.  \n");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.print("Thank You for using this ATM, bye.  \n");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			break;
 
 		default:
@@ -100,7 +113,9 @@ public class OptionMenu extends Account {
 			break;
 
 		case 4:
-			System.out.println("Thank You for using this ATM, bye.");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.print("Thank You for using this ATM, bye.");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			break;
 
 		default:
@@ -136,7 +151,9 @@ public class OptionMenu extends Account {
 			break;
 
 		case 4:
-			System.out.println("Thank You for using this ATM, bye.");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.print("Thank You for using this ATM, bye.");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			break;
 
 		default:
